@@ -3,6 +3,11 @@ view: order_items {
   drill_fields: [id]
 
   dimension: id {
+    link: {
+      label: "desired label name"
+      url: "https://gcpl256.cloud.looker.com/"
+      icon_url: "url_of_an_image_file"
+    }
     primary_key: yes
     type: number
     sql: ${TABLE}.id ;;
