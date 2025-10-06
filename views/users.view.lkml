@@ -56,6 +56,17 @@ view: users {
     tiers: [10, 20, 30, 40, 50, 60, 70, 80, 90]
     style: integer
   }
+  measure: users_count {
+    type: count
+    html:
+          <ul>
+            <li>Explore: {{ _explore._name }}</li>
+            <li>Model: {{ _model._name }}</li>
+            <li>Users Country: {{ users.country._in_query }}</li>
+            <li>Query Timezone: {{ _query._query_timezone }}</li>
+          </ul>
+          ;;
+  }
   measure: average_user_age {
     type: average
     label: "Average User Age"
